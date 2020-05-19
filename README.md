@@ -28,8 +28,9 @@ python main_bibo.py
 
 ## Built With
 * [requests](https://github.com/psf/requests) - A simple, yet elegant HTTP library.
-* [ebooklib](https://github.com/aerkalov/ebooklib) - Python E-book library for handling books 
-in EPUB2/EPUB3 format
+* [ebooklib](https://github.com/aerkalov/ebooklib) - Python E-book library for handling books in EPUB2/EPUB3 format
+* [tqdm](https://github.com/tqdm/tqdm) - A Fast, Extensible Progress Bar for Python and CLI 
+
 
 ## Authors
 * **Abdullah Mosibah** - *Initial work* - [Github](https://github.com/abdullahMosibah)
