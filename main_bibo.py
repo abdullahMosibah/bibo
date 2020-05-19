@@ -1,7 +1,10 @@
 import requests
 from ebooklib import epub
 from bs4 import BeautifulSoup
+from tqdm import tqdm
+import datetime
 
+now = datetime.date.today()
 #initialize e-book META data.
 book = epub.EpubBook()
 book.set_identifier('PGsample0')
@@ -38,8 +41,10 @@ def create_ebook(links):
     # remove the first and last element
     links.remove(links[0])
     links.remove(links[-1])
+
+    links = tqdm(links)
     for link in links:
-        print(f'Downloading {link.text}')
+        links.set_description("%s" % link.text)
         article = requests.get(f"http://paulgraham.com/{link.get('href')}")
         article_soup = BeautifulSoup(article.content , 'html.parser')
         chapter = epub.EpubHtml(title = str(link.text) ,
@@ -50,12 +55,10 @@ def create_ebook(links):
         book.toc.append(chapter)
         book.spine.append(chapter)
 
-
 #book.spine.append(nav_css)
 
 #create the eboook
-epub.write_epub('pgtest.epub' , book)
-print(' done ')
-if __name__ == "__name__":
+epub.write_epub(f"PGessays-{now}.epub" , book)
+if __name__ == "__main__":
     scrape_articles("http://paulgraham.com/articles.html")
 

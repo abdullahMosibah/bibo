@@ -2,3 +2,4 @@ EbookLib
 BeautifulSoup4
 requests
 
+tqdm
