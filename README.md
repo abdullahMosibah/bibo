@@ -6,7 +6,9 @@ e-books reader app/device.
 ### Installing
 clone this repo.
 ``` 
-git clone https://github.com/abdullahMosibah/bibo.git cd bibo
+git clone https://github.com/abdullahMosibah/bibo.git
+cd bibo
+
 ``` 
 
 and create a new enviroment and activate it.
