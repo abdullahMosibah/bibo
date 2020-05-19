@@ -38,7 +38,7 @@ python main_bibo.py
 * **Abdullah Mosibah** - *Initial work* - [Github](https://github.com/abdullahMosibah)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for 
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/abdullahMosibah/bibo/blob/master/license.txt) file for 
 details
 
 ## Acknowledgments
